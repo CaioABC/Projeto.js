@@ -1,6 +1,16 @@
-//## Centimetros para polegadas]
-//Converter cm -> in (1 in = 2,54).
-//Elabore um programa que leia um valor em **centimentros** e converta para **polegadas**.
-//Considere a fórmula:
-//`1 polegada = 2,54 centimetros`
-//Mostre o resultado com **duas casas decimais**
+
+
+//Exemplo 3
+//Nota(aprovado ou reprovado)
+
+const nota = Number(prompt("Nota (0-100):"));
+
+if (Number.isNaN(nota) || nota < 0 || nota > 100) {
+    console.log("Nota invalida")
+} else if (nota < 60) {
+    console.log("Reprovado")
+} else if (nota < 80) {
+    console.log("Recuperação")
+}else {
+    console.log("Aprovado")
+}
