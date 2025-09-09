@@ -126,6 +126,8 @@ while (tentativas !== secreto) {
     }
 }
 
+//Filter, Map, Find e Reduce
+
 
 //Filter
 //Exemplo: obter os números pares de um array
@@ -192,3 +194,15 @@ console.log(totalPorCategoria)
 
 ACC = Acumulador
 Cat = ItemAtual
+
+
+const compras = [
+  {nome: "Leite", preco: 5},
+  {nome: "Pão", preco: 8},
+  {nome: "Manteiga", preco: 12},
+]
+const valorTotal = compras.reduce((acumulador, itemAtual) => {
+  return acumulador + itemAtual.preco
+}, 0)
+
+console.log(valorTotal)
