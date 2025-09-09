@@ -127,4 +127,68 @@ while (tentativas !== secreto) {
 }
 
 
+//Filter
+//Exemplo: obter os números pares de um array
+const nums = [1, 2, 3, 4, 5, 6];
 
+//Filter
+const pares = nums.filter(n => n % 2 === 0);
+
+console.log(pares)
+
+//callback
+const idades = [15, 20, 25, 12];
+// const maiores = idades.filter(function (i) { return i >= 18;});
+// const maiores = idades.filter((i) => {return i >= 18});
+const maiores = idades.filter(i => i >= 18)
+console.log(maiores);
+
+//Map
+const nums = [1, 2, 3, 4];
+
+//map cria um novo array com o resultado da função aplicada a cada item
+const dobrados = nums.map(n => n * 2)
+console.log(dobrados)
+
+const alunos = [
+  {nome: "Ana", nota: 6},
+  {nome: "Bruno", nota: 10},
+];
+const nomes = alunos.map(a => `${a.nome}`)
+const comAprovacao = alunos.map(a => ({...a, aprovado: a.nota >= 7}));
+
+
+//Find busca o primeiro elemento que satisfaz a consdição e retorna esse elemento
+
+const ns = [3, 7, 4, 9];
+const primeiroPar = ns.find(n => n % 2 === 0);
+
+console.log(primeiroPar);
+
+const produtos = [
+  {id: 1, nome: "Camiseta"},
+  {id: 2, nome: "Caneca"},
+];
+const p = produtos.find(p => p.id === 1);
+console.log(p)
+
+
+//reduce reduz o array a um único valor(número, objeto, array...)
+
+const items = [
+  { nome: "Caneta", categoria: "Papelaria", preco: 3 },
+  { nome: "Caderno", categoria: "Papelaria", preco: 15 },
+  { nome: "Maçã", categoria: "Alimentos", preco: 2 },
+];
+
+const totalPorCategoria = items.reduce((acc, it) => {
+  const cat = it.categoria;
+  if (!acc[cat]) acc[cat] = 0;
+  acc[cat] += it.preco;
+  return acc;
+}, {});
+console.log(totalPorCategoria)
+
+
+ACC = Acumulador
+Cat = ItemAtual
